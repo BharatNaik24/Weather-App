@@ -49,7 +49,7 @@ function FiveDaysPredictions({ cityName }) {
     return (
       <div className="five-days-forecast-container">
         <h2 className="container">5 Days Forecast</h2>
-        <ul className="forecast-cards-container">
+        <ul className="forecast-cards-container container">
           {forecastData.list.map((item) => (
             <EachItemCard key={item.dt} item={item} />
           ))}

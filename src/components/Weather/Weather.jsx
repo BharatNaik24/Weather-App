@@ -199,7 +199,7 @@ function Weather() {
             />
           </button>
         </div>
-        <div className="unitSelector">
+        <div className="unitSelector container">
           <label htmlFor="unit">Select Unit:</label>
           <select
             id="unit"
