@@ -120,7 +120,7 @@ function Weather() {
         <div className="humidandWindSpeedContainer">
           <div className="humidContainer">
             <img
-              src="/public/images/humidity.png"
+              src="https://i.postimg.cc/Bbm5pzn2/humidity.png"
               alt="humidity"
               className="humidityIcon"
             />
@@ -132,7 +132,7 @@ function Weather() {
 
           <div className="speedContainer">
             <img
-              src="/public/images/wind.png"
+              src="https://i.postimg.cc/FR99vChf/wind.png"
               alt="windSpeed"
               className="speedIcon"
             />
@@ -181,14 +181,7 @@ function Weather() {
 
   return (
     <div className="mainBgContainer">
-      <div
-        className=""
-        style={{
-          backgroundColor: "#e5ebc3",
-          padding: "15px",
-          borderRadius: "10px",
-        }}
-      >
+      <div className="secondCon">
         <div className="iconswithSearch">
           <input
             type="text"
