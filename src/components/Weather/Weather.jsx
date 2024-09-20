@@ -11,16 +11,15 @@ const apiStatusConstants = {
 };
 
 const weatherImgaes = {
-  Clouds: "./public/images/clouds.png",
-  Clear: "./public/images/clear.png",
-  Rain: "./public/images/rain.png",
-  Drizzle: "./public/images/drizzle.png",
-  Mist: "./public/images/mist.png",
-  Snow: "./public/images/snow.png",
-  Thunderstorm:
-    "https://cdn0.iconfinder.com/data/icons/weather-and-season-3d-pack/512/Rain_Thunderstrom_at_Night.png",
+  Clouds: "https://i.postimg.cc/C552N28D/clouds.png",
+  Clear: "https://i.postimg.cc/XqgvfpwX/clear.png",
+  Rain: "https://i.postimg.cc/dtBB16Tc/rain.png",
+  Drizzle: "https://i.postimg.cc/1RghDgrd/drizzle.png",
+  Mist: "https://i.postimg.cc/3rZpCRrg/mist.png",
+  Snow: "https://i.postimg.cc/XqNrDfN9/snow.png",
+  Thunderstorm: "https://i.postimg.cc/Jnsryph6/thunderstorm.png",
   Haze: "https://i.postimg.cc/wM5VFqzm/fog.png",
-  default: "./public/images/clear.png",
+  default: "https://i.postimg.cc/XqgvfpwX/clear.png",
 };
 
 function Weather() {
