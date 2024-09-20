@@ -1,6 +1,7 @@
 .mainBgContainer {
     background: linear-gradient(to right, #dceefb, #a9c4ff);
-    height: 100vh;
+    min-height: 100%;
+    max-height: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
