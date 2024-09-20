@@ -45,7 +45,7 @@ function EachItemCard({ item }) {
         </div>
 
         <div className="climateName">
-          <p className="date">{item.weather[0].main}</p>
+          <p className="condition">{item.weather[0].main}</p>
 
           <div className="dropletIcons">
             <img
@@ -53,7 +53,10 @@ function EachItemCard({ item }) {
               alt="Humidity icon"
               className="droplet"
             />
-            <p className="date">{item.main.humidity}%</p>
+            <div>
+              <p className="date">{item.main.humidity}%</p>
+              <p className="date1">{Math.round(item.main.temp)}°C</p>
+            </div>
           </div>
         </div>
       </li>

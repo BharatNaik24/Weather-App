@@ -1,15 +1,17 @@
-
-
 .eachCon {
-    background-color: aquamarine;
+    background-color: #338ae0; /* Light gray background for professional tone */
     margin-right: 20px;
     margin-bottom: 20px;
-    padding: 5px;
-    width: auto; 
-    height: 100%;
+    padding: 10px;
+    width: auto;
+    min-height: 100%;
+    max-height: auto;
     transition: all 0.3s ease-in-out;
     cursor: pointer;
-    box-sizing: border-box; 
+    box-sizing: border-box;
+    border-radius: 8px; /* Adding subtle rounding for a modern look */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    font-family: 'Open Sans', sans-serif;
 }
 
 .listItems {
@@ -18,16 +20,17 @@
     overflow: hidden;
     padding: 0;
     margin: 0;
-    align-items: center; 
+    align-items: center;
 }
 
 .predictIcons {
-    width: 60px; 
+    width: 60px;
     height: 60px;
 }
 
 .droplet {
-    width: 30px; 
+    width: 30px;
+    align-self: flex-start;
 }
 
 .climateName {
@@ -43,24 +46,45 @@
     align-items: center;
 }
 
-.date {
-    font-size: 12px; 
+.condition {
+     font-size: 12px;
     font-weight: 500;
     text-align: center;
+    color: #fff; 
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 500;
+    margin-top: 20px;
+}
+.date {
+    font-size: 12px;
+    font-weight: 500;
+    text-align: center;
+    color: #fff; 
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 500;
+    margin-top: 7px;
+}
+.date1 {
+    font-size: 12px;
+    font-weight: 500;
+    text-align: center;
+    color: #fff; 
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 500;
 }
 
 
 @media screen and (max-width: 768px) {
     .eachCon {
         width: auto;
-        height: 80px;
+        height: auto;
         margin-right: 10px;
         margin-bottom: 10px;
     }
 
     .predictIcons {
-        width: 80px; 
-        height: 80px;
+        width: 50px;
+        height: 50px;
     }
 
     .date {
@@ -68,21 +92,21 @@
     }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 500px) and  {
     .eachCon {
-        width: auto; 
-        height: auto; 
+        width: auto;
+        height: auto;
         margin-right: 5px;
         margin-bottom: 5px;
         padding: 10px;
     }
 
     .predictIcons {
-        width: 50px; 
+        width: 50px;
         height: 50px;
     }
 
     .date {
-        font-size: 10px; 
+        font-size: 10px;
     }
 }

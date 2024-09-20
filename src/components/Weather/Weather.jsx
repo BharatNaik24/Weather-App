@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { Circles } from "react-loader-spinner";
-
 import "./Weather.css";
 import FiveDaysPredictions from "../FiveDaysPredictions/FiveDaysPredictions";
 
@@ -20,7 +19,7 @@ const weatherImgaes = {
   Snow: "./public/images/snow.png",
   Thunderstorm:
     "https://cdn0.iconfinder.com/data/icons/weather-and-season-3d-pack/512/Rain_Thunderstrom_at_Night.png",
-  Haze: "https://files.softicons.com/download/web-icons/android-weather-icons-by-bharath-prabhuswamy/png/512x512/Haze.png",
+  Haze: "https://i.postimg.cc/wM5VFqzm/fog.png",
   default: "./public/images/clear.png",
 };
 
@@ -28,9 +27,14 @@ function Weather() {
   const [cityName, setCityName] = useState("Hyderabad");
   const [weatherData, setWeatherData] = useState(null);
   const [apiStatus, setApiStatus] = useState(apiStatusConstants.initial);
+  const [unit, setUnit] = useState("Celsius");
 
   const onChangeInput = (event) => {
     setCityName(event.target.value);
+  };
+
+  const onUnitChange = (event) => {
+    setUnit(event.target.value);
   };
 
   const getData = async () => {
@@ -80,7 +84,7 @@ function Weather() {
     if (cityName) {
       getData();
     }
-  }, []);
+  }, [cityName]);
 
   const onKeyDown = (event) => {
     if (event.key === "Enter") {
@@ -88,7 +92,7 @@ function Weather() {
     }
   };
 
-  const converCelsiusToFaranite = (value) => {
+  const converCelsiusToFahrenheit = (value) => {
     return (value * 9) / 5 + 32;
   };
 
@@ -98,7 +102,10 @@ function Weather() {
 
   const renderSuccessView = () => {
     const tempCelsius = weatherData.main.temp;
-    const tempFaranite = converCelsiusToFaranite(tempCelsius);
+    const tempFahrenheit = converCelsiusToFahrenheit(tempCelsius);
+
+    const displayedTemp = unit === "Celsius" ? tempCelsius : tempFahrenheit;
+    const displayedUnit = unit === "Celsius" ? "C" : "F";
 
     return (
       <div className="iconsAndLocation">
@@ -107,9 +114,8 @@ function Weather() {
           <p className="tempTitle">{weatherData.weather[0].main}</p>
         )}
         <h1 className="temparature">
-          {Math.round(weatherData.main.temp)}°<span className="span">C</span> /{" "}
-          <span></span>
-          {Math.round(tempFaranite)}°<span className="span">F</span>
+          {Math.round(displayedTemp)}°
+          <span className="span">{displayedUnit}</span>
         </h1>
         <h1 className="searchLocation">{weatherData.name}</h1>
         <div className="humidandWindSpeedContainer">
@@ -193,6 +199,18 @@ function Weather() {
               className="searchIcon"
             />
           </button>
+        </div>
+        <div className="unitSelector">
+          <label htmlFor="unit">Select Unit:</label>
+          <select
+            id="unit"
+            value={unit}
+            onChange={onUnitChange}
+            className="unitDropdown"
+          >
+            <option value="Celsius">Celsius</option>
+            <option value="Fahrenheit">Fahrenheit</option>
+          </select>
         </div>
         {renderWeatherInfo()}
         <FiveDaysPredictions cityName={cityName} />

@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import "./FiveDaysPredictions.css";
 import EachItemCard from "../EachItemCard/EachItemCard";
 import { Circles } from "react-loader-spinner";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 const apiStatusConstants = {
   initial: "INITIAL",
@@ -14,28 +15,6 @@ function FiveDaysPredictions({ cityName }) {
   const [forecastData, setData] = useState({});
   const [error, setError] = useState(null);
   const [apiStatus, setApiStatus] = useState(apiStatusConstants.initial);
-
-  // useEffect(() => {
-  //   const fetchData = async () => {
-  //     try {
-  //       setApiStatus(apiStatusConstants.inProgress);
-  //       const url = `https://api.openweathermap.org/data/2.5/forecast?units=metric&q=Hyderabad&appid=0c65cf51708626a7e1cf39e0738c483b`;
-  //       const response = await fetch(url);
-  //       if (!response.ok) {
-  //         throw new Error("Network response was not ok");
-  //       }
-  //       const data = await response.json();
-  //       setData(data);
-  //       setApiStatus(apiStatusConstants.success);
-  //       console.log(data);
-  //     } catch (error) {
-  //       setApiStatus(apiStatusConstants.failure);
-  //       setError(error.message);
-  //       console.log("fetchError");
-  //     }
-  //   };
-  //   fetchData();
-  // }, []);
 
   useEffect(() => {
     fetchData();
@@ -69,7 +48,7 @@ function FiveDaysPredictions({ cityName }) {
   const renderSuccessView = () => {
     return (
       <div className="five-days-forecast-container">
-        <h2>5 Days Forecast</h2>
+        <h2 className="container">5 Days Forecast</h2>
         <ul className="forecast-cards-container">
           {forecastData.list.map((item) => (
             <EachItemCard key={item.dt} item={item} />

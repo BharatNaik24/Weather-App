@@ -1,16 +1,30 @@
-
-/* Main background container */
 .mainBgContainer {
-    background: linear-gradient(to right, #a8ff78, #78ffd6);
+    background: linear-gradient(to right, #dceefb, #a9c4ff);
     height: 100vh;
-    min-height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 0 20px; 
+    padding: 0 20px;
+    margin: 0 auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
 }
-/* Search button and box */
+
+.unitSelector {
+  margin-top: 20px;
+}
+
+.unitDropdown {
+  margin-left: 10px;
+  padding: 5px;
+  font-size: 14px;
+  border: 2px solid #338ae0;
+  border-radius: 5px;
+  background-color: transparent;
+  color:#000000;
+}
+
 .searchButton {
     background-color: transparent;
     border: none;
@@ -23,7 +37,7 @@
     border: 3px solid #003cff;
     border-radius: 8px;
     padding: 15px;
-    box-sizing: border-box; 
+    box-sizing: border-box;
 }
 
 .iconswithSearch {
@@ -42,23 +56,22 @@
     border-radius: 10px;
     padding: 20px;
     width: 90%;
-    max-width: 600px; 
+    max-width: 600px;
     height: auto;
 }
 
 .searchIcon {
     width: 20px;
     height: 20px;
-    margin-left: -30px; 
+    margin-left: -30px;
 }
 
 .searchIcon:hover {
     cursor: pointer;
 }
 
-/* Weather icon and location */
 .weatherIcon {
-    width: 100px; 
+    width: 100px;
     height: 100px;
     margin-top: 20px;
 }
@@ -116,10 +129,10 @@
     color: #c300ff;
 }
 
-/* Responsive design */
+/* Responsive design for small devices */
 @media screen and (max-width: 768px) {
     .searchBarContainer {
-        width: 90%;
+        width: auto;
         padding: 15px;
     }
 
@@ -145,6 +158,53 @@
     }
 }
 
+/* Responsive design for medium devices (768px to 1024px) */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .mainBgContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .searchBarContainer {
+        width: 70%;
+        padding: 20px;
+        background-color: rgba(255, 255, 255, 0.3);
+        backdrop-filter: blur(10px);
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        margin: auto; 
+        height: 100%;
+    }
+
+    .weatherIcon {
+        width: 80px;
+        height: 80px;
+    }
+
+    .temparature {
+        font-size: 26px;
+    }
+
+    .searchLocation {
+        font-size: 22px;
+    }
+
+    .tempTitle {
+        font-size: 16px;
+    }
+
+    .humidContainer, .speedContainer {
+        margin: 15px;
+    }
+}
+
+/* Responsive design for very small devices (max-width: 500px) */
 @media screen and (max-width: 500px) {
     .searchBarContainer {
         width: 100%;
