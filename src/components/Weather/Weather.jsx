@@ -181,7 +181,14 @@ function Weather() {
 
   return (
     <div className="mainBgContainer">
-      <div className="searchBarContainer">
+      <div
+        className=""
+        style={{
+          backgroundColor: "#e5ebc3",
+          padding: "15px",
+          borderRadius: "10px",
+        }}
+      >
         <div className="iconswithSearch">
           <input
             type="text"
@@ -193,7 +200,7 @@ function Weather() {
           />
           <button className="searchButton" onClick={onSearchClick}>
             <img
-              src="./public/images/search.png"
+              src="https://i.postimg.cc/8zm61MNY/search.png"
               alt="searchIcon"
               className="searchIcon"
             />

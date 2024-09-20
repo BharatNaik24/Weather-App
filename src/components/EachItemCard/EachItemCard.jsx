@@ -1,14 +1,15 @@
 import "./EachItemCard.css";
 
 const weatherImgaes = {
-  Clouds: "./public/images/clouds.png",
-  Clear: "./public/images/clear.png",
-  Rain: "./public/images/rain.png",
-  Drizzle: "./public/images/drizzle.png",
-  Mist: "./public/images/mist.png",
-  Snow: "./public/images/snow.png",
-  Haze: "https://files.softicons.com/download/web-icons/android-weather-icons-by-bharath-prabhuswamy/png/512x512/Haze.png",
-  default: "./public/images/clear.png",
+  Clouds: "https://i.postimg.cc/C552N28D/clouds.png",
+  Clear: "https://i.postimg.cc/XqgvfpwX/clear.png",
+  Rain: "https://i.postimg.cc/dtBB16Tc/rain.png",
+  Drizzle: "https://i.postimg.cc/1RghDgrd/drizzle.png",
+  Mist: "https://i.postimg.cc/3rZpCRrg/mist.png",
+  Snow: "https://i.postimg.cc/XqNrDfN9/snow.png",
+  Thunderstorm: "https://i.postimg.cc/Jnsryph6/thunderstorm.png",
+  Haze: "https://i.postimg.cc/wM5VFqzm/fog.png",
+  default: "https://i.postimg.cc/XqgvfpwX/clear.png",
 };
 
 function EachItemCard({ item }) {
